@@ -36,24 +36,3 @@ do {
     }
 } while (!productoEncontrado);
 
-
-
-
-
-
-
-
-// const iphoneElegido = mostrarProductos();
-
-// let productoEncontrado = false;
-// for (let i = 0; i < productos.length; i++) {
-//     if (productos[i].nombre === iphoneElegido) {
-//         alert(`Seleccionaste el ${iphoneElegido}`);
-//         productoEncontrado = true;
-//         break;
-//     }
-// }
-
-// if (!productoEncontrado) {
-//     alert("El producto que deseas no está disponible");
-// }
