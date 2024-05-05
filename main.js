@@ -1,15 +1,15 @@
 
-alert("Bienvenido a Iphone.CdelU\n\nTenemos todos los modelos de iphone comenzando desde el Iphone 8 en adelante.")
+alert("Bienvenido a Iphone.CdelU\n\nTenemos todos los modelos de iPhone comenzando desde el iPhone 8 en adelante.");
 
 const productos = [
-    {nombre: "Iphone 8"},
-    {nombre: "Iphone X"},
-    {nombre: "Iphone XR"},
-    {nombre: "Iphone 11"},
-    {nombre: "Iphone 12"},
-    {nombre: "Iphone 13"},
-    {nombre: "Iphone 14"},
-    {nombre: "Iphone 15"}
+    { nombre: "Iphone 8", precio: "$200", colores: "Blanco y Negro\nCapacidad de espacio: 64gb y 128gb" },
+    { nombre: "Iphone X", precio: "$300", colores: "Blanco, Negro y Dorado\nCapacidad de espacio: 64gb, 128gb y 256gb" },
+    { nombre: "Iphone XR", precio: "$350", colores: "Blanco\nCapacidad de espacio: 64gb y 128gb" },
+    { nombre: "Iphone 11", precio: "$400", colores: "Blanco, Violeta y Verde\nCapacidad de espacio: 128gb" },
+    { nombre: "Iphone 12", precio: "$450", colores: "Negro\nCapacidad de espacio: 64gb y 128gb" },
+    { nombre: "Iphone 13", precio: "$500", colores: "Blanco y Negro\nCapacidad de espacio: 128gb y 256gb" },
+    { nombre: "Iphone 14", precio: "$600", colores: "Celeste y Negro\nCapacidad de espacio: 128gb y 512gb" },
+    { nombre: "Iphone 15", precio: "$700", colores: "Negro, Rosa y Azul\nCapacidad de espacio: 128gb y 256gb" }
 ];
 
 
@@ -20,22 +20,40 @@ const mostrarProductos = () => {
     });
     alert(listaProductos);
 
-    const productoElegido = prompt("Ingrese el nombre del iPhone que desea comprar:");
+    const productoElegido = prompt("Ingrese el nombre del iPhone que desea comprar:").toLowerCase(); 
     return productoElegido;
 };
 
-const iphoneElegido = mostrarProductos();
+let productoEncontrado;
 
-let productoEncontrado = false;
-for (let i = 0; i < productos.length; i++) {
-    if (productos[i].nombre === iphoneElegido) {
-        alert(`Seleccionaste el ${iphoneElegido}`);
-        productoEncontrado = true;
-        break;
+do {
+    const iphoneElegido = mostrarProductos();
+    productoEncontrado = productos.find(producto => producto.nombre.toLowerCase() === iphoneElegido); 
+    if (productoEncontrado) {
+        alert(`Seleccionaste el ${productoEncontrado.nombre}\n\nPrecio: ${productoEncontrado.precio}\nDescripción: ${productoEncontrado.colores}`);
+    } else {
+        alert("El producto que deseas no está disponible\n\nPor favor, leer lista de productos y elija un modelo disponible");
     }
-}
+} while (!productoEncontrado);
 
-if (!productoEncontrado) {
-    alert("El producto que deseas no está disponible");
-}
 
+
+
+
+
+
+
+// const iphoneElegido = mostrarProductos();
+
+// let productoEncontrado = false;
+// for (let i = 0; i < productos.length; i++) {
+//     if (productos[i].nombre === iphoneElegido) {
+//         alert(`Seleccionaste el ${iphoneElegido}`);
+//         productoEncontrado = true;
+//         break;
+//     }
+// }
+
+// if (!productoEncontrado) {
+//     alert("El producto que deseas no está disponible");
+// }
