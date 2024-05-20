@@ -1,0 +1,68 @@
+body {
+    background-color: #fcfcfce3; /* Color de fondo claro */
+}
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#carrito {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    right: 20px;
+    position: fixed;
+    bottom: 20px;
+    
+}
+
+#itemsCarrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+#itemsCarrito li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+#itemsCarrito li:last-child {
+    border-bottom: none;
+}
+
+.tarjeta {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+}
+
+.tarjeta p {
+    margin: 5px 0;
+}
+
+.tarjeta button {
+    background-color: #5ba0e1;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tarjeta button:hover {
+    background-color: #5ba0e1;
+}
